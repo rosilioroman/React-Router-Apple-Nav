@@ -1,44 +1,32 @@
-const links = [
-    {
-        text: 'apple-icon',
-        imageUrl: '../images/apple-icon.png'
-    }, 
+const linksData = [
     {
         text: 'Mac',
-        imageUrl: ''
+        id: 0
     }, 
     {
         text: 'iPad',
-        imageUrl: ''
+        id: 1
     }, 
     {
         text: 'iPhone',
-        imageUrl: ''
+        id: 2
     }, 
     {
         text: 'Watch',
-        imageUrl: ''
+        id: 3
     }, 
     {
         text: 'TV',
-        imageUrl: ''
+        id: 4
     }, 
     {
         text: 'Music',
-        imageUrl: ''
+        id: 5
     }, 
     {
         text: 'Support',
-        imageUrl: ''
-    }, 
-    {
-        text: 'search-icon',
-        imageUrl: '../images/search-icon.png'
-    }, 
-    {
-        text: 'bag-icon',
-        imageUrl: '../images/bag-icon.png'
+        id: 6
     }
 ];
 
-export default links;
+export default linksData;

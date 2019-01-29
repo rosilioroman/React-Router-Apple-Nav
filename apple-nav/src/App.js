@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
+import linksData from './main-nav-data';
 import MainNav from './components/MainNav';
-import links from './main-nav-data';
 
 import './App.css';
 
@@ -16,8 +16,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({ links: links });
+    this.setState({ links: linksData });
   }
+
   render() {
     return (
       <div className="App">

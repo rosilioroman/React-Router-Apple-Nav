@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Route, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 //components
-import GlobalStyles from './GlobalStyles';
 import MainLinksContainer from './MainLinksContainer';
-import SubNav from './SubNav';
 
 //images
 import Apple from '../images/apple-icon.png';
@@ -43,18 +41,14 @@ const IconLink = styled.li`
 
 const MainNav = props => {
     return (
-        <GlobalStyles>
-            <MainNavWrapper>
-                <MainNavContent>
-                    <IconLink><NavLink to="/"><img src={Apple} alt="apple icon"/></NavLink></IconLink>
-                    <MainLinksContainer linksList={props.linksList}/>
-                    <IconLink><NavLink to="/"><SearchIcon src={Search} alt="search icon"/></NavLink></IconLink>
-                    <IconLink><NavLink to="/"><img src={Bag} alt="bag icon"/></NavLink></IconLink>
-                </MainNavContent>
-            </MainNavWrapper>
-
-            <Route path="/:product/" component={SubNav} />
-        </GlobalStyles>
+        <MainNavWrapper>
+            <MainNavContent>
+                <IconLink><NavLink to="/"><img src={Apple} alt="apple icon"/></NavLink></IconLink>
+                <MainLinksContainer linksList={props.linksList}/>
+                <IconLink><NavLink to="/"><SearchIcon src={Search} alt="search icon"/></NavLink></IconLink>
+                <IconLink><NavLink to="/"><img src={Bag} alt="bag icon"/></NavLink></IconLink>
+            </MainNavContent>
+        </MainNavWrapper>
     );
 }
 

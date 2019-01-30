@@ -6,7 +6,7 @@ import linksData from './main-nav-data';
 import MainNav from './components/MainNav';
 import SubNav from './components/SubNav';
 
-import './App.css';
+import './normalize.css';
 
 
 class App extends Component {

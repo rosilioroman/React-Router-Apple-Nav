@@ -1,21 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Ipad from './subnav-components/Ipad';
+import Iphone from './subnav-components/Iphone';
 import Mac from './subnav-components/Mac';
+import Music from './subnav-components/Music';
+import Support from './subnav-components/Support';
+import Tv from './subnav-components/Tv';
+import Watch from './subnav-components/Watch';
 
 const SubNavWrapper = styled.div`
     width: 100%;
     height: 11vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     background-color: #F5F5F6;
 `;
 
 const SubNavContent = styled.div`
     width: 50%;
     height: 100%;
-    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 function SubNav(props) {
@@ -32,9 +39,21 @@ function SubNav(props) {
 function componentSelector(pathname) {
     switch(pathname) {
         case '/mac/':
-            return <Mac />
+            return <Mac />;
+        case '/ipad/':
+            return <Ipad />;
+        case '/iphone/':
+            return <Iphone />;
+        case '/watch/':
+            return <Watch />;
+        case '/tv/':
+            return <Tv />;
+        case '/music/':
+            return <Music />;
+        case '/support/':
+            return <Support />;
         default:
-            return ;
+            break;
     }
 }
 

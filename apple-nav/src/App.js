@@ -22,7 +22,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Route exact path="/" render={props => <MainNav {...props} linksList={this.state.links}/>} />
+        <Route path="/" render={props => <MainNav {...props} linksList={this.state.links}/>} />
       </div>
     );
   }

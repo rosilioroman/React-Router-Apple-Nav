@@ -25,7 +25,7 @@ class App extends Component {
     return (
       <GlobalStyles>
         <Route path="/" render={props => <MainNav {...props} linksList={this.state.links}/>} />
-        <Route path="/:product/" render={props => <SubNav {...props}/>} />
+        <Route path="/:product/" component={ SubNav } />
       </GlobalStyles>
     );
   }

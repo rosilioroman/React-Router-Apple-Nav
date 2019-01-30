@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Route, Switch } from 'react-router-dom';
 
 import Ipad from './subnav-components/Ipad';
 import Iphone from './subnav-components/Iphone';
@@ -29,32 +30,18 @@ function SubNav(props) {
     return (
         <SubNavWrapper>
             <SubNavContent>
-                {componentSelector(props.location.pathname)}
+                <Switch>
+                    <Route path="/mac/" component={Mac} />
+                    <Route path="/ipad/" component={Ipad} />
+                    <Route path="/iphone/" component={Iphone} />
+                    <Route path="/watch/" component={Watch} />
+                    <Route path="/tv/" component={Tv} />
+                    <Route path="/music/" component={Music} />
+                    <Route path="/support/" component={Support} />
+                </Switch>
             </SubNavContent>
         </SubNavWrapper>
     );
-}
-
-//returns the appropriate subnav component based on the current URL/pathname
-function componentSelector(pathname) {
-    switch(pathname) {
-        case '/mac/':
-            return <Mac />;
-        case '/ipad/':
-            return <Ipad />;
-        case '/iphone/':
-            return <Iphone />;
-        case '/watch/':
-            return <Watch />;
-        case '/tv/':
-            return <Tv />;
-        case '/music/':
-            return <Music />;
-        case '/support/':
-            return <Support />;
-        default:
-            break;
-    }
 }
 
 export default SubNav;
